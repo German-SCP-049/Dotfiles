@@ -1,0 +1,86 @@
+configuration {
+    display-drun: "Programs";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{icon} {name}";
+    font: "Liberation Sans Bold 10";
+    modi: "window,run,drun";
+    show-icons: true;
+}
+
+* {
+    color1: #00000000;
+    color2: #917750;
+    color3: #FFFF9F;
+    color4: #FFF75C;
+    color5: #AFA78D;
+
+    border-color: @color3;
+    normal-foreground: @color5;
+    alternate-normal-foreground: @color5;
+    selected-normal-foreground: @color3;
+
+    background-color: @color1;
+    normal-background: @color1;
+    alternate-normal-background: @color1;
+    selected-normal-background: @color1;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    transparency: true;
+    background-color: @color1;
+    padding: 0;
+    border: 2;
+    opacity: 0.5;
+    location: north west;
+    y-offset: 36px;
+    x-offset: 4px;
+    width: 670px;
+    height: 400px;
+}
+
+// Taken from https://github.com/pewdiepie-archdaemon/dionysus/blob/dionysus/dotfiles/rofi/theme.rasi
+
+mainbox {
+  orientation: horizontal;
+  background-image: url("~/.config/rofi/void.png");
+  background-repeat: false;
+  children: ["contentbox", "spacebox"];
+  spacing: 190px;
+  padding: 0px;
+}
+
+contentbox {
+  orientation: vertical;
+  children: ["entry", "listview"];
+  spacing: 0px;
+  padding: 0px;
+}
+
+entry {
+  padding: 4px;
+  expand: false;
+}
+
+spacebox {
+    background-color: @color1;
+}
+
+scrollbar {
+    handle-width: 2px;
+    handle-color: @color3;
+}
+
+element.selected.normal {
+    border: 2;
+}
+
+listview {
+    border-color: @color3;
+}
+

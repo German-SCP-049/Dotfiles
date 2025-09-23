@@ -1,0 +1,192 @@
+/* Forked from https://github.com/TheFrankyDoll/win10-style-waybar */
+
+/*base background color*/
+@define-color bg_main rgba(15, 13, 9, 0.4);
+@define-color bg_main_tooltip rgba(15, 13, 9, 0.8);
+
+
+/*base background color of selections */
+@define-color bg_hover rgba(145, 119, 80, 0.5);
+/*base background color of active elements */
+@define-color bg_active rgba(26, 23, 17, 1);
+
+/*base border color*/
+@define-color border_main rgba(255, 255, 159, 1);
+
+/*text color for entries, views and content in general */
+@define-color content_main rgba(175, 167, 141, 1);
+/*text color for entries that are unselected */
+@define-color content_inactive rgba(175, 167, 141, 1);
+
+@define-color warning_color rgba(255, 247, 92, 1);
+
+* {
+  text-shadow: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 11.0px;
+}
+
+window#waybar {
+  background:  @bg_main;
+  border-bottom: 2px solid @border_main;
+  color: @content_main;
+}
+
+tooltip {
+  background: @bg_main_tooltip;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @border_main;
+}
+tooltip label {
+  color: @content_main;
+}
+
+#custom-os_button {
+    background-image: url("./logo.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+	margin-right: -6px;
+    font-size: 24px;
+}
+#custom-os_button:hover {
+    background-image: url("./logo_selected.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 24px;
+}
+
+#workspaces {
+  color: transparent;
+	margin-right: 1.5px;
+}
+#workspaces button {
+  padding: 0.5px;
+  color: @content_inactive;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#workspaces button.active {
+	color: @content_main;
+	border-bottom: 3px solid rgba(255, 247, 92, 1);
+}
+#workspaces button.focused {
+  color: @bg_active;
+}
+#workspaces button.urgent {
+	background:  rgba(255, 200, 0, 0.35);
+	border-bottom: 3px dashed @warning_color;
+	color: @warning_color;
+}
+#workspaces button:hover {
+  background: @bg_hover;
+	color: @content_main;
+    border-bottom: 3.5px solid rgba(255, 255, 159, 1)
+}
+
+#taskbar {
+}
+
+#taskbar button {
+	min-width: 130px;
+	border-bottom: 2px solid rgba(255, 247, 91, 1);
+	margin-left: 2px;
+	margin-right: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: @content_main;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#taskbar button.active {
+	border-bottom: 2px solid #FFF75C;
+  background: @bg_active;
+}
+
+#taskbar button:hover {
+    border-bottom: 3px solid rgba(255, 255, 159, 1);
+  background: @bg_hover;
+	color: @content_main;
+}
+
+#cpu, #disk, #memory {
+	padding:3px;
+}
+
+#temperature {
+	color: transparent;
+	font-size: 0px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#temperature.critical {
+	padding-right: 3px;
+	color: @warning_color;
+	font-size: initial;
+	border-bottom: 3px dashed @warning_color;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#tray{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#tray > .passive {
+	border-bottom: none;
+}
+#tray > .active {
+	border-bottom: 2px solid rgba(255, 247, 91, 1);
+}
+#tray > .needs-attention {
+	border-bottom: 3px solid @warning_color;
+}
+#tray > widget {
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#tray > widget:hover {
+	border-bottom: 3px solid rgba(255, 255, 159, 1);
+	background: @bg_hover;
+}
+
+#pulseaudio {
+	font-family: "JetBrainsMono Nerd Font";
+	padding-left: 3px;
+  padding-right: 7px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#pulseaudio:hover {
+ 	background: @bg_hover;
+}
+
+#network {
+	padding-left: 5px;
+    padding-right: 5px;
+}
+
+#battery {
+    padding-left: 5px;
+}
+
+#language {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#clock {
+  padding-right: 5px;
+  padding-left: 5px;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#clock:hover {
+	background: @bg_hover;
+}
+
