@@ -2,10 +2,10 @@
 
 This is a repo of all the dotfiles I make and use for my laptop
 
-![Preview 1](/home/scp-049/Projects/Dotfiles/pictures/preview_1.png) 
-![Preview 2](/home/scp-049/Projects/Dotfiles/pictures/preview_2.png) 
-![Preview 3](/home/scp-049/Projects/Dotfiles/pictures/preview_3.png) 
-![Preview 4](/home/scp-049/Projects/Dotfiles/pictures/preview_4.png) 
+![Preview 1](./pictures/preview_1.png) 
+![Preview 2](./pictures/preview_2.png) 
+![Preview 3](./pictures/preview_3.png) 
+![Preview 4](./pictures/preview_4.png) 
 
 ## Software
 
