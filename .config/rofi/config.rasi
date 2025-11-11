@@ -38,7 +38,7 @@ window {
     border: 2;
     opacity: 0.5;
     location: north west;
-    y-offset: 36px;
+    y-offset: 5px;
     x-offset: 4px;
     width: 670px;
     height: 400px;
